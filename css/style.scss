@@ -477,6 +477,9 @@ Header
   }
 
   @media screen and (max-width: 1024px) {
+    height: 65px;
+    border-top: none;
+    border-bottom: 1px solid rgb(237, 237, 238);
     padding: 10px 3vw;
 
     &::before {
@@ -491,9 +494,17 @@ Header
       transition: 1s cubic-bezier(0.19, 1, 0.22, 1);
     }
 
+    &::after {
+      content: none;
+    }
+
     &.active::before {
       width: 300px;
 
+    }
+
+    h1 {
+      font-size: 20px;
     }
 
     .hamburger {
@@ -591,21 +602,25 @@ Header
       right: 0;
       z-index: 100;
       margin: 0;
-      padding: 120px 5vw 0 0;
+      padding: 14vh 5vw 0 0;
 
       .gnavi {
         flex-direction: column;
         align-items: end;
         height: auto;
-        margin-bottom: 3vh;
+        margin-bottom: 4vh;
 
         .link {
-          font-size: 28px;
+          font-size: 22px;
           font-weight: 500;
           text-align: center;
 
           &:not(:last-child) {
-            margin: 0 0 3vh;
+            margin: 0 0 4vh;
+          }
+
+          >a {
+            padding: 0;
           }
         }
       }
@@ -637,12 +652,10 @@ Header
     }
 
     .sub_menu {
-      font-size: 22px;
+      font-size: 18px;
       transition: all .25s ease;
-      padding-right: 20px;
+      padding-right: 10px;
       margin-top: 2vh;
-      // opacity: 0;
-      // visibility: hidden;
 
       .link-sub {
         &:not(:last-child) {
@@ -722,6 +735,14 @@ components
       svg {
         fill: #fff;
         transform: rotate(180deg);
+      }
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .sec {
+      h2 {
+        font-size: 12vw;
       }
     }
   }
@@ -828,6 +849,46 @@ components
   font-weight: 600;
   text-transform: uppercase;
   margin: 0 0 27px;
+}
+
+.block-ttl01 {
+  line-height: 1;
+  margin-bottom: 10px;
+
+  .ttl {
+    font-size: 35px;
+    font-weight: 300;
+  }
+
+  .box {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+
+    p {
+      font-size: 20px;
+    }
+  }
+}
+
+.block-gallery {
+  .items {
+    width: 100%;
+    max-height: 600px;
+    display: flex;
+    gap: 10px;
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
 }
 
 .photo01 {
@@ -1082,6 +1143,11 @@ components
       font-size: 8.5em;
     }
   }
+}
+
+.contact-info {
+  text-align: center;
+  padding: 50px 0;
 }
 
 
