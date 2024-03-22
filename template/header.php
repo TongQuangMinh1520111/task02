@@ -25,6 +25,7 @@
   <!-- Google Analytics end -->
   <?php wp_head(); ?>
 </head>
+
 <body>
   <div id="wrapper">
     <header id="header">
@@ -32,25 +33,21 @@
       <div class="hamburger"><span></span><span></span><span></span><span></span></div>
       <div class="overlay">
         <div class="menu">
-          <ul class="gnavi">
-            <li class="link"><a href="#">Home</a></li>
-            <li class="link"><a href="#">About</a></li>
-            <li class="link sub">
-              <a href="#">Project</a>
-              <ul class="sub_menu">
-                <li class="link-sub"><a href="#">gardens</a></li>
-                <li class="link-sub"><a href="#">gardens</a></li>
-                <li class="link-sub"><a href="#">gardens</a></li>
-                <li class="link-sub"><a href="#">gardens</a></li>
-              </ul>
-            </li>
-            <li class="link"><a href="#">Contact</a></li>
-
-          </ul>
+          <?php
+          wp_nav_menu(
+            array(
+              'menu' => 'MenuHeader',
+              'menu_class' => 'gnavi',
+            )
+          );
+          ?>
           <ul class="social">
-            <li class="insta"><a href="#"><img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/common/insta.png" alt="instagram"></a></li>
+            <li class="insta"><a href="#"><img
+                  src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/common/insta.png" alt="instagram"></a>
+            </li>
           </ul>
         </div>
       </div>
     </header>
     <main class="main">
+      <?php require_once (get_stylesheet_directory() . '/module/block-mainv.php'); ?>

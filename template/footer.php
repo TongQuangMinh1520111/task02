@@ -15,38 +15,41 @@
 
 <footer id="footer">
   <div class="inner">
-    <div class="footer_link">
-      <dl class="list-link">
-        <dt class="ttl">PROJECTS</dt>
-        <dd>
-          <p class="link"><a href="#">GARDENS</a></p>
-          <p class="link"><a href="#">HOTELS</a></p>
-          <p class="link"><a href="#">INTERIORS</a></p>
-          <p class="link"><a href="#">RETAIL</a></p>
-          <p class="link"><a href="#">YACHTS</a></p>
-        </dd>
-      </dl>
-      <dl class="list-link">
-        <dt class="ttl">PROJECTS</dt>
-        <dd>
-          <p class="link"><a href="#">GARDENS</a></p>
-          <p class="link"><a href="#">HOTELS</a></p>
-          <p class="link"><a href="#">INTERIORS</a></p>
-          <p class="link"><a href="#">RETAIL</a></p>
-          <p class="link"><a href="#">YACHTS</a></p>
-        </dd>
-      </dl>
-      <dl class="list-link">
-        <dt class="ttl">PROJECTS</dt>
-        <dd>
-          <p class="link"><a href="#">GARDENS</a></p>
-          <p class="link"><a href="#">HOTELS</a></p>
-          <p class="link"><a href="#">INTERIORS</a></p>
-          <p class="link"><a href="#">RETAIL</a></p>
-          <p class="link"><a href="#">YACHTS</a></p>
-        </dd>
-      </dl>
-    </div>
+    <ul class="footer_link">
+      <li>
+        <p class="ttl">PROJECTS</p>
+        <?php
+        wp_nav_menu(
+          array(
+            'menu' => 'MenuFooter01',
+            'menu_class' => 'list-link',
+          )
+        );
+        ?>
+      </li>
+      <li>
+        <p class="ttl">PROJECTS</p>
+        <?php
+        wp_nav_menu(
+          array(
+            'menu' => 'MenuFooter02',
+            'menu_class' => 'list-link',
+          )
+        );
+        ?>
+      </li>
+      <li>
+        <p class="ttl">PROJECTS</p>
+        <?php
+        wp_nav_menu(
+          array(
+            'menu' => 'MenuFooter03',
+            'menu_class' => 'list-link',
+          )
+        );
+        ?>
+      </li>
+    </ul>
   </div>
   <address>&copy; 2024 Anouska Hempel Limited</address>
 </footer>

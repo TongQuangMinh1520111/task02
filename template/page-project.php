@@ -14,60 +14,12 @@
 
 get_header();
 ?>
-<div class="block-mainv">
-  <figure><img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/top/mainv.webp" alt="mainv"></figure>
-  <div class="sec">
-    <h2>Project</h2>
-    <a href="#" class="scroll-down">
-      <svg preserveAspectRatio="none" data-bbox="19.999 58 160.001 84" viewBox="19.999 58 160.001 84" height="15"
-        width="25" xmlns="http://www.w3.org/2000/svg" data-type="shape" role="presentation" aria-hidden="true">
-        <g>
-          <path
-            d="M172.5 142a7.485 7.485 0 0 1-5.185-2.073L100 75.808l-67.315 64.12c-2.998 2.846-7.74 2.744-10.606-.234a7.454 7.454 0 0 1 .235-10.565l72.5-69.057a7.524 7.524 0 0 1 10.371 0l72.5 69.057a7.455 7.455 0 0 1 .235 10.565A7.503 7.503 0 0 1 172.5 142z">
-          </path>
-        </g>
-      </svg>
-    </a>
-  </div>
-</div>
 <div class="contents">
-  <section class="block">
-    <ul class="list-btn">
-      <li class="c-btnlink">
-        <a href="#">
-          <figure><img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/common/btn_img.webp" alt=""></figure>
-          <h3>GARDENS</h3>
-        </a>
-      </li>
-      <li class="c-btnlink">
-        <a href="#">
-          <figure><img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/common/btn_img.webp" alt=""></figure>
-          <h3>GARDENS</h3>
-        </a>
-      </li>
-      <li class="c-btnlink">
-        <a href="#">
-          <figure><img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/common/btn_img.webp" alt=""></figure>
-          <h3>GARDENS</h3>
-        </a>
-      </li>
-      <li class="c-btnlink">
-        <a href="#">
-          <figure><img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/common/btn_img.webp" alt=""></figure>
-          <h3>GARDENS</h3>
-        </a>
-      </li>
-      <li class="c-btnlink">
-        <a href="#">
-          <figure><img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/common/btn_img.webp" alt=""></figure>
-          <h3>GARDENS</h3>
-        </a>
-      </li>
-    </ul>
-  </section>
+  <?php require_once (get_stylesheet_directory() . '/module/block-list-button.php'); ?>
   <section class="block">
     <div class="block-content block-content--01">
-      <figure class="bg"><img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/common/bg01.webp" alt=""></figure>
+      <figure class="bg"><img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/common/bg01.webp" alt="">
+      </figure>
       <div class="card">
         <div class="frame">
           <h2 class="c-title03">
@@ -87,94 +39,49 @@ get_header();
       </div>
     </div>
   </section>
-  <section class="block block--01">
-    <h2 class="c-title04">GARDENS</h2>
-    <ul class="list-btn">
-      <li class="c-btnlink">
-        <a href="#">
-          <figure><img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/common/btn_img.webp" alt=""></figure>
-          <h3>GARDENS</h3>
-        </a>
-      </li>
-      <li class="c-btnlink">
-        <a href="#">
-          <figure><img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/common/btn_img.webp" alt=""></figure>
-          <h3>GARDENS</h3>
-        </a>
-      </li>
-      <li class="c-btnlink">
-        <a href="#">
-          <figure><img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/common/btn_img.webp" alt=""></figure>
-          <h3>GARDENS</h3>
-        </a>
-      </li>
-      <li class="c-btnlink">
-        <a href="#">
-          <figure><img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/common/btn_img.webp" alt=""></figure>
-          <h3>GARDENS</h3>
-        </a>
-      </li>
-      <li class="c-btnlink">
-        <a href="#">
-          <figure><img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/common/btn_img.webp" alt=""></figure>
-          <h3>GARDENS</h3>
-        </a>
-      </li>
-    </ul>
-  </section>
-  <section class="block block--01">
-    <h2 class="c-title04">Hotels</h2>
-    <ul class="list-btn">
-      <li class="c-btnlink">
-        <a href="#">
-          <figure><img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/common/btn_img.webp" alt=""></figure>
-          <h3>GARDENS</h3>
-        </a>
-      </li>
-      <li class="c-btnlink">
-        <a href="#">
-          <figure><img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/common/btn_img.webp" alt=""></figure>
-          <h3>GARDENS</h3>
-        </a>
-      </li>
-      <li class="c-btnlink">
-        <a href="#">
-          <figure><img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/common/btn_img.webp" alt=""></figure>
-          <h3>GARDENS</h3>
-        </a>
-      </li>
-      <li class="c-btnlink">
-        <a href="#">
-          <figure><img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/common/btn_img.webp" alt=""></figure>
-          <h3>GARDENS</h3>
-        </a>
-      </li>
-      <li class="c-btnlink">
-        <a href="#">
-          <figure><img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/common/btn_img.webp" alt=""></figure>
-          <h3>GARDENS</h3>
-        </a>
-      </li>
-      <li class="c-btnlink">
-        <a href="#">
-          <figure><img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/common/btn_img.webp" alt=""></figure>
-          <h3>GARDENS</h3>
-        </a>
-      </li>
-      <li class="c-btnlink">
-        <a href="#">
-          <figure><img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/common/btn_img.webp" alt=""></figure>
-          <h3>GARDENS</h3>
-        </a>
-      </li>
-      <li class="c-btnlink">
-        <a href="#">
-          <figure><img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/common/btn_img.webp" alt=""></figure>
-          <h3>GARDENS</h3>
-        </a>
-      </li>
-    </ul>
-  </section>
+  <?php
+  $the_query = new WP_Query(
+    array(
+      'post_type' => 'page',
+      'meta_key' => '_wp_page_template',
+      'meta_value' => 'tpl-project.php'
+    )
+  );
+  if ($the_query->have_posts()) {
+    while ($the_query->have_posts()) {
+      $the_query->the_post();
+      ?>
+
+
+      <section class="block block--01">
+        <h2 class="c-title04">
+          <?php the_title() ?>
+        </h2>
+        <?php $group_gallery = get_field('group_gallery'); ?>
+        <ul class="list-btn">
+          <?php if (!empty ($group_gallery)) {
+            foreach ($group_gallery as $val) {
+              $s_title = $val['s_title'];
+              $img = $val['button_image'];
+
+              ?>
+              <li class="c-btnlink">
+                <a href="<?php the_permalink(); ?>/#<?php echo sanitize_title($s_title); ?> ">
+                  <figure><img src="<?php echo $img; ?>" alt="<?php echo $s_title; ?>"></figure>
+                  <h3>
+                    <?php echo $s_title; ?>
+                  </h3>
+                </a>
+              </li>
+            <?php }
+          }
+          ?>
+        </ul>
+      </section>
+      <?php
+    }
+  }
+  ?>
   <section class="block-slogan01">
     <div class="inner">
       <h2 class="slogan01"><span class="txt01">CREATIVITY</span><span class="txt02">BUILDING,</span><span
