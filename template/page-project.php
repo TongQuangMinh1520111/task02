@@ -15,7 +15,9 @@
 get_header();
 ?>
 <div class="contents">
-  <?php require_once (get_stylesheet_directory() . '/module/block-list-button.php'); ?>
+  <section class="block">
+    <?php require_once (get_stylesheet_directory() . '/module/block-list-button.php'); ?>
+  </section>
   <section class="block">
     <div class="block-content block-content--01">
       <figure class="bg"><img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/common/bg01.webp" alt="">
@@ -63,7 +65,6 @@ get_header();
             foreach ($group_gallery as $val) {
               $s_title = $val['s_title'];
               $img = $val['button_image'];
-
               ?>
               <li class="c-btnlink">
                 <a href="<?php the_permalink(); ?>/#<?php echo sanitize_title($s_title); ?> ">

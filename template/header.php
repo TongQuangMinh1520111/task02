@@ -25,8 +25,7 @@
   <!-- Google Analytics end -->
   <?php wp_head(); ?>
 </head>
-
-<body>
+<body class="<?php echo $class = is_page('contact') ? 'page-contact' : "" ?>">
   <div id="wrapper">
     <header id="header">
       <h1><a href="/">ANOUSKA HEMPEL</a></h1>

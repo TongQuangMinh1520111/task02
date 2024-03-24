@@ -16,57 +16,44 @@ get_header();
 <div class="contents">
   <section class="block">
     <div class="flex flex01">
-      <div class="box-left">
-        <figure class="photo01"><img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/top/img03.png"
-            alt=""></figure>
+      <?php $block_content01 = get_field('block_content01');
+      $box_image01 = $block_content01['box_image01'];
+      $text_content01 = $block_content01['text_content01'];
+      $class = $text_content01 ? 'box-left' : '';
+      ?>
+      <div class="<?php echo $class ?>">
+        <figure class="photo01"><img src="<?php echo $box_image01; ?>" alt="banner"></figure>
       </div>
-      <div class="box-right">
-        <div class="c-frame01">
-          <h2 class="c-title01">
-            <span class="txt01">DESIGN</span><span class="txt02">FOLLOWS</span><span class="txt03">WHERE</span><span
-              class="txt04">IMAGINATION</span><span class="txt04">GOES</span>
-          </h2>
-          <p class="txt">- Anouska Hempel</p>
+      <?php if (!empty ($text_content01)): ?>
+        <div class="box-right">
+          <?php echo $text_content01; ?>
         </div>
-      </div>
-    </div>
-  </section>
-  <?php require_once (get_stylesheet_directory() . '/module/block-list-button.php'); ?>
-  <section class="block flex">
-    <div class="box-left">
-      <figure class="photo01"><img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/top/img01.jpg"
-          alt=""></figure>
-    </div>
-    <div class="box-right">
-      <figure class="photo01"><img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/top/img02.jpg"
-          alt=""></figure>
+      <?php endif; ?>
     </div>
   </section>
   <section class="block">
+    <?php require_once (get_stylesheet_directory() . '/module/block-list-button.php'); ?>
+  </section>
+  <section class="block banner-top">
+    <?php $block_banner = get_field('block_banner');
+    if (!empty ($block_banner)) {
+      $class = (count($block_banner) > 1) ? 'img' : '';
+      foreach ($block_banner as $img) { ?>
+        <figure class="<?php echo $class; ?>"><img src="<?php echo $img; ?>" alt="banner"></figure>
+      <?php }
+    } ?>
+  </section>
+  <section class="block">
     <div class="block-content">
-      <figure class="bg"><img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/common/bg01.webp" alt="">
-      </figure>
-      <div class="card">
-        <div class="frame">
-          <h2 class="c-title02">
-            <span>ALL ELEMENTS OF</span>A LIFE<span>of</span>DESIGN
-          </h2>
-          <div class="sec">
-            <p>The savant of the visual, Anouska Hempel is revered across the world for her originality and for
-              her
-              influence. This is a designer who sees everything, and instinctively understands it. Wherever the
-              trade routes have passed or the trade winds have blown - that’s her territory and at once you are
-              thrown into a throng of creativity that is impelled to take every realm of design to more thrilling
-              and higher heights.
-            </p>
-            <p>There is mystery, romance, theatre and perfection; an utopian whirl of stories to be told and
-              worlds
-              to unfold. The stuff of dreams, a glimpse of beyond - from dignitary to vagabond - a corner for
-              every
-              inch of thought alongside beauty, delight and charm.</p>
-          </div>
-        </div>
-      </div>
+      <?php $block_content02 = get_field('block_content02');
+      $box_image02 = $block_content02['box_image02'];
+      $text_content02 = $block_content02['text_content02'];
+      ?>
+      <figure class="bg"><img src="<?php echo $box_image02 ?>" alt="banner"></figure>
+      <?php if (!empty ($text_content02)) {
+        echo $text_content02;
+      }
+      ?>
     </div>
   </section>
   <section class="block-slogan">
