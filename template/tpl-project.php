@@ -41,7 +41,7 @@ get_header();
     if (!empty ($banner_footer)) { ?>
       <div>
         <img src="<?php echo $banner_gallery ?>" alt="<?php the_title() ?>" loading="lazy">
-    </div>
+      </div>
     <?php } ?>
   </div>
   <div class="btn-modal js-modal" aria-controls="modal-img"><a>條款及細則</a></div>
@@ -59,10 +59,16 @@ get_header();
               alt="icon"></a></li>
         <li><a href="#"><img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/common/twitter.svg"
               alt="icon"></a></li>
+        <li><a href="#"><img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/common/pinterest.svg"
+              alt="icon"></a></li>
+        <li><a href="#"><img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/common/tumblr.svg"
+              alt="icon"></a></li>
+        <li><a href="#"><img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/common/envelope.svg"
+              alt="icon"></a></li>
       </ul>
       <div class="box-link">
         <div class="txt">
-          <p></p>
+          <p id="txt-link"></p>
         </div>
         <div class="btn-copy"><i><svg xmlns="http://www.w3.org/2000/svg" width="18" height="16" viewBox="0 0 18 16"
               class="social-share-copylink-icon">

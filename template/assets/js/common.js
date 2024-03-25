@@ -99,7 +99,6 @@ $(document).ready(function () {
       $modal.attr("aria-hidden", "true").hide("slow");
     }
     var $imgSrc = $(this).parent().find("img").attr("src");
-    console.log($imgSrc);
     $(".modal .box-link  .txt p").append($imgSrc);
     $("html").addClass("is-modalOpened");
   });
@@ -107,5 +106,13 @@ $(document).ready(function () {
     let $modal = $(this).closest(".modal");
     $modal.attr("aria-hidden", "true");
     $("html").removeClass("is-modalOpened");
+  });
+
+  $(document).on("click", ".btn-copy", function () {
+    var $imgSrc = $("#txt-link").text();
+    navigator.clipboard
+      .writeText($imgSrc)
+      .then(() => {})
+      .catch(() => {});
   });
 });

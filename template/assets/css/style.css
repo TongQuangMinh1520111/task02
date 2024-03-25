@@ -1302,19 +1302,18 @@ Modal
   gap: 30px;
 }
 .modal .list-social li {
-  width: 25px;
-  height: 25px;
   display: flex;
-  align-items: center;
-  justify-content: center;
 }
 .modal .list-social li img {
-  width: 100%;
-  height: 100%;
+  width: 25px;
+  height: 25px;
   -o-object-fit: contain;
      object-fit: contain;
 }
 .modal .list-social li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   transition: all 0.25s ease;
 }
 .modal .list-social li a:hover {
