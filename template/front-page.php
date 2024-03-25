@@ -22,7 +22,7 @@ get_header();
       $class = $text_content01 ? 'box-left' : '';
       ?>
       <div class="<?php echo $class ?>">
-        <figure class="photo01"><img src="<?php echo $box_image01; ?>" alt="banner"></figure>
+        <figure class="photo01"><img src="<?php echo $box_image01; ?>" alt="banner" loading="lazy"></figure>
       </div>
       <?php if (!empty ($text_content01)): ?>
         <div class="box-right">
@@ -39,7 +39,7 @@ get_header();
     if (!empty ($block_banner)) {
       $class = (count($block_banner) > 1) ? 'img' : '';
       foreach ($block_banner as $img) { ?>
-        <figure class="<?php echo $class; ?>"><img src="<?php echo $img; ?>" alt="banner"></figure>
+        <figure class="<?php echo $class; ?>"><img src="<?php echo $img; ?>" alt="banner" loading="lazy"></figure>
       <?php }
     } ?>
   </section>
@@ -49,18 +49,21 @@ get_header();
       $box_image02 = $block_content02['box_image02'];
       $text_content02 = $block_content02['text_content02'];
       ?>
-      <figure class="bg"><img src="<?php echo $box_image02 ?>" alt="banner"></figure>
+      <figure class="bg"><img src="<?php echo $box_image02 ?>" alt="banner" loading="lazy"></figure>
       <?php if (!empty ($text_content02)) {
         echo $text_content02;
       }
       ?>
     </div>
   </section>
-  <section class="block-slogan">
-    <div class="inner">
-      <h2><span>DESIGN</span><span>REFINE</span>&<span>REPEAT</span></h2>
-      <p>There is mystery, romance, theatre and perfection.</p>
-    </div>
-  </section>
+  <?php $block_slogan = get_field('block_slogan');
+  if (!empty ($block_slogan)) { ?>
+    <section class="block-slogan">
+      <div class="inner">
+        <?php echo $block_slogan; ?>
+      </div>
+    </section>
+  <?php } ?>
+
 </div>
 <?php get_footer();

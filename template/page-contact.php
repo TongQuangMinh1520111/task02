@@ -28,7 +28,7 @@ get_header();
           <li class="c-btnlink01">
             <a href="<?php echo $href ?>">
               <figure>
-                <img src="<?php echo $img ?>" alt="<?php echo $text ?>">
+                <img src="<?php echo $img ?>" alt="<?php echo $text ?>" loading="lazy">
                 <figcaption>
                   <?php echo $text ?>
                 </figcaption>
@@ -49,7 +49,7 @@ get_header();
     <?php $contact_banner = get_field('contact_banner');
     if (!empty ($contact_banner)): ?>
       <div class="banner01">
-        <img src="<?php echo $contact_banner; ?>" alt="Contact">
+        <img src="<?php echo $contact_banner; ?>" alt="Contact" loading="lazy">
       </div>
     <?php endif ?>
   </div>

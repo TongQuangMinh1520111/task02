@@ -21,7 +21,7 @@
               the_post_thumbnail();
             } else { ?>
               <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/common/dummy_link.webp"
-                alt="<?php the_title() ?>">
+                alt="<?php the_title() ?>" loading="lazy">
             <?php } ?>
           </figure>
           <h3>

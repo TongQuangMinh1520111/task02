@@ -621,6 +621,11 @@ components
   border-top: 1px solid rgb(237, 237, 238);
   padding: 50px 0 0;
 }
+@media screen and (max-width: 768px) {
+  .block {
+    margin: 0 0 50px;
+  }
+}
 
 .contents {
   background: #fff;
@@ -781,6 +786,17 @@ components
 .block-ttl01 .box p {
   font-size: 20px;
   margin: 0;
+}
+@media screen and (max-width: 768px) {
+  .block-ttl01 .ttl {
+    font-size: 25px;
+  }
+  .block-ttl01 .box {
+    margin-top: 10px;
+  }
+  .block-ttl01 .box p {
+    font-size: 16px;
+  }
 }
 
 .block-gallery .items {
@@ -1176,15 +1192,16 @@ Footer
   text-align: center;
   margin: 0 auto 100px;
 }
-#footer .footer_link .ttl {
+#footer .footer_link .ttl > a {
+  display: inline-block;
   font-size: 17px;
   font-weight: 600;
   margin: 0 0 30px;
 }
-#footer .footer_link .list-link li {
+#footer .footer_link .sub-menu li {
   font-size: 14px;
   text-transform: uppercase;
-  margin: 0;
+  margin: 0 0 5px;
 }
 #footer address {
   font-size: 14px;
@@ -1204,4 +1221,135 @@ Footer
     flex-direction: column;
     margin: 0 auto 40px;
   }
+}
+
+/*-------------------------------
+Modal
+--------------------------------*/
+.is-modalOpened body {
+  overflow: hidden;
+}
+
+.modal {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+
+.modal ::-webkit-scrollbar {
+  display: none;
+}
+
+.modal_overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+.modal[aria-hidden=true] {
+  opacity: 0;
+  display: none;
+}
+
+.modal[aria-hidden=false] {
+  opacity: 1;
+  display: block;
+}
+
+.modal_container {
+  background: #fff;
+  height: 250px;
+  width: 94%;
+  max-width: 580px;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 999;
+}
+
+.modal-close img {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+  z-index: 9;
+}
+
+.modal .modal_content {
+  padding: 3vw;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.modal .list-social {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+.modal .list-social li {
+  width: 25px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modal .list-social li img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.modal .list-social li a {
+  transition: all 0.25s ease;
+}
+.modal .list-social li a:hover {
+  opacity: 0.7;
+}
+.modal .box-link {
+  display: flex;
+  width: 94%;
+  max-width: 300px;
+  height: 40px;
+  border: 1px solid #000;
+  margin: 30px auto 0;
+}
+.modal .box-link .txt {
+  width: calc(100% - 50px);
+  display: flex;
+  align-items: center;
+  padding: 8px 10px;
+  overflow-x: auto;
+}
+.modal .box-link .txt p {
+  white-space: nowrap;
+}
+.modal .box-link .btn-copy {
+  width: 50px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.1s ease;
+  padding-top: 5px;
+}
+.modal .box-link .btn-copy:hover {
+  opacity: 0.7;
 }/*# sourceMappingURL=style.css.map */

@@ -20,14 +20,15 @@ if (!empty ($group_gallery)) {
         </div>
       </div>
       <div class="block-gallery">
-
         <?php foreach ($gr_img as $val) {
           $images = $val['images']; ?>
           <div class="items">
             <?php
             foreach ($images as $img) {
               ?>
-              <figure><img src="<?php echo $img ?>" alt="<?php echo $s_title ?>"></figure>
+              <div><img src="<?php echo $img ?>" alt="<?php echo $s_title ?>" loading="lazy">
+                <div class="icon-share btn-modal js-modal" aria-controls="modal-img">btn modal</div>
+              </div>
             <?php } ?>
           </div>
         <?php } ?>
@@ -35,5 +36,3 @@ if (!empty ($group_gallery)) {
     </section>
   <?php }
 } ?>
-
-

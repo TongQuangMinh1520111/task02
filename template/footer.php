@@ -15,41 +15,14 @@
 
 <footer id="footer">
   <div class="inner">
-    <ul class="footer_link">
-      <li>
-        <p class="ttl">PROJECTS</p>
-        <?php
-        wp_nav_menu(
-          array(
-            'menu' => 'MenuFooter01',
-            'menu_class' => 'list-link',
-          )
-        );
-        ?>
-      </li>
-      <li>
-        <p class="ttl">PROJECTS</p>
-        <?php
-        wp_nav_menu(
-          array(
-            'menu' => 'MenuFooter02',
-            'menu_class' => 'list-link',
-          )
-        );
-        ?>
-      </li>
-      <li>
-        <p class="ttl">PROJECTS</p>
-        <?php
-        wp_nav_menu(
-          array(
-            'menu' => 'MenuFooter03',
-            'menu_class' => 'list-link',
-          )
-        );
-        ?>
-      </li>
-    </ul>
+    <?php
+    wp_nav_menu(
+      array(
+        'menu' => 'MenuFooter',
+        'menu_class' => 'footer_link',
+      )
+    );
+    ?>
   </div>
   <address>&copy; 2024 Anouska Hempel Limited</address>
 </footer>

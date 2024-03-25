@@ -1,6 +1,6 @@
 <div class="block-mainv">
     <figure>
-        <figure><img src="<?php echo get_field('main_image'); ?>" alt="mainv"></figure>
+        <figure><img src="<?php echo get_field('main_image'); ?>" alt="mainv" loading="lazy"></figure>
     </figure>
     <?php if (!(is_front_page())) { ?>
         <div class="sec">
