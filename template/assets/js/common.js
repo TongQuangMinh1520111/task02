@@ -8,7 +8,7 @@ $(window).bind("load", function () {
         if ($(window).width() > 768) {
           $("html,body").animate(
             {
-              scrollTop: p.top - 100,
+              scrollTop: p.top - 170,
             },
             600
           );
@@ -24,14 +24,6 @@ $(window).bind("load", function () {
       return false;
     });
   });
-
-  var _boxes = $(".overlay");
-  _boxes.bind("lightup", function () {
-    setTimeout(function () {
-      $(".overlay").removeClass("overlay-hide");
-    }, 400);
-  });
-
   $(".hamburger").click(function (e) {
     e.preventDefault();
     $("#header").toggleClass("active");
@@ -62,3 +54,33 @@ $(window).bind("load", function () {
   });
 });
 
+
+//totop
+$(document).ready(function () {
+  "use strict";
+  $(".js-modal").click(function (e) {
+    e.preventDefault();
+    const $modal = $("#" + $(this).attr("aria-controls"));
+    if ($modal.attr("aria-hidden") == "true") {
+      $modal.attr("aria-hidden", "false").show("fast");
+    } else {
+      $modal.attr("aria-hidden", "true").hide("slow");
+    }
+    var $imgSrc = $(this).parent().find("img").attr("src");
+    $(".modal .box-link  .txt p").append($imgSrc);
+    $("html").addClass("is-modalOpened");
+  });
+  $(".modal-close, .modal_overlay").click(function () {
+    let $modal = $(this).closest(".modal");
+    $modal.attr("aria-hidden", "true");
+    $("html").removeClass("is-modalOpened");
+  });
+
+  $(document).on("click", ".btn-copy", function () {
+    var $imgSrc = $("#txt-link").text();
+    navigator.clipboard
+      .writeText($imgSrc)
+      .then(() => {})
+      .catch(() => {});
+  });
+});
