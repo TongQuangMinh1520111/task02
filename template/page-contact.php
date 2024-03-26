@@ -14,7 +14,7 @@
 
 get_header();
 ?>
-<div class="contents">
+<div id="pos-contents" class="contents">
   <div class="contact-cont">
 
     <?php

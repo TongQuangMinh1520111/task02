@@ -3,7 +3,7 @@
 get_header();
 ?>
 
-<div class="contents">
+<div id="pos-contents" class="contents">
   <div class="block">
     <ul class="list-btn">
       <?php $group_gallery = get_field('group_gallery');
@@ -39,12 +39,11 @@ get_header();
   <div class="banner02">
     <?php $banner_footer = get_field('banner_footer');
     if (!empty ($banner_footer)) { ?>
-      <div>
+      <figure>
         <img src="<?php echo $banner_gallery ?>" alt="<?php the_title() ?>" loading="lazy">
-      </div>
+      </figure>
     <?php } ?>
   </div>
-  <div class="btn-modal js-modal" aria-controls="modal-img"><a>條款及細則</a></div>
 </div>
 
 <div class="modal" id="modal-img" role="dialog" aria-modal="true" aria-hidden="true">

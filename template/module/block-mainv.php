@@ -7,7 +7,7 @@
         <h2>
             <?php the_title(); ?>
         </h2>
-        <a href="#" class="scroll-down">
+        <a href="#pos-contents" class="scroll-down">
             <svg preserveAspectRatio="none" data-bbox="19.999 58 160.001 84" viewBox="19.999 58 160.001 84" height="15"
                 width="25" xmlns="http://www.w3.org/2000/svg" data-type="shape" role="presentation" aria-hidden="true">
                 <g>
